@@ -4,25 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <!-- Add Alpine.js for toggle functionality (optional) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
 </head>
 
 <body class="bg-black">
-    <nav class=" flex flex-row bg-black  ">
-        <img class="w-52" src="jdlogosvg.svg" alt="">
-        <ul class="py-6 px-60 mx-3 my-3 flex space-x-0  justify-end text-white ">
-            <li class="cursor-pointer hover:text-white rounded-2xl px-3"> Home</li>
-            <li class="cursor-pointer hover:text-white rounded-2xl px-3">Courses</li>
+    <nav class="flex items-center justify-between p-6 bg-black fixed top-0 left-0 right-0">
+        <!-- Logo -->
+        <img class="w-52" src="jdlogosvg.svg" alt="Logo">
 
-            <li class="cursor-pointer hover:text-white rounded-2xl px-3">Placment</li>
-            <li class="cursor-pointer hover:text-white rounded-2xl px-3">Certificate</li>
-            <li class="cursor-pointer hover:text-white rounded-2xl px-3">Contact us</li>
+        <!-- Toggle Button for mobile view -->
+        <div class="lg:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+                <i :class="open ? 'fas fa-times' : 'fas fa-bars'" class="text-white"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul :class="{'block': open, 'hidden': !open}" class="hidden lg:flex space-x-6 text-white">
+            <li class="cursor-pointer hover:text-blue-400">Home</li>
+            <li class="cursor-pointer hover:text-blue-400">Courses</li>
+            <li class="cursor-pointer hover:text-blue-400">Placement</li>
+            <li class="cursor-pointer hover:text-blue-400">Certificate</li>
+            <li class="cursor-pointer hover:text-blue-400">Contact Us</li>
         </ul>
-            <button class= "text-white  m-4 rounded-2xl bg-blue bg-blue-600 -py-10 w-32 h-11 cursor-pointer ">Login</button>
-        
+
+        <!-- Login Button -->
+        <button class="hidden lg:block text-white bg-blue-600 rounded-2xl px-4 py-2 cursor-pointer">Login</button>
     </nav>
     <br>
     <!--About us-->
