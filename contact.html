@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md z-20 fixed w-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-gray-900">INSPIRE CAD ACADEMY</a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-base font-medium text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="about.html" target="_blank" class="font-medium text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-blue-600">Free Demo Class</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-blue-600">Courses</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-blue-600">Placements</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-blue-600">Contact</a>
+                    <!-- <a href="#" class="text-base font-medium text-gray-600 hover:text-gray-900">Contact</a> -->
+                    
+                </nav>
+
+                <!-- Call to Action -->
+                <div class="hidden md:flex items-center justify-end">
+                    <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+        <!-- Contact Us Section -->
+   <section class="bg-white py-16">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Contact Us</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" name="name" id="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" name="email" id="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea name="message" id="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-yellow-500 text-white py-3 px-6 rounded-md font-semibold hover:bg-yellow-600 transition duration-300">Send Message</button>
+                    </div>
+                </form>
+            </div></section><br>
+
+                  
+
+  <!--Footer-->
+  <footer class="bg-black text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap -mx-4">
+        <!-- About Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+          <p class="text-gray-400">
+            At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to enhance your skills and knowledge in the ever-evolving tech industry.
+          </p>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="#" class="text-white hover:text-blue-500">Home</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">About</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Placements</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Contact</a></li>
+
+          </ul>
+        </div>
+        <!-- Services Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Courses</h3>
+          <ul>
+            <li><a href="#" class="text-white hover:text-blue-500">Web Development</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Data Science</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Cybersecurity</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">Cloud Computing</a></li>
+            <li><a href="#" class="text-white hover:text-blue-500">AI & ML</a></li>
+          </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="w-full md:w-1/4 px-4">
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+          <p class="text-gray-400">Email: info@inspireacademy.com</p>
+          <p class="text-gray-400">Phone: +1 234 567 890</p>
+          <!-- Social Media Icons -->
+          <div class="mt-6 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+        <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>         
+</body>
+</html>
