@@ -7,100 +7,50 @@
   <title>Testing</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
-
-  <!-- Script for Mobile Menu Toggle -->
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-
-  <!-- Hero Section -->
-
-  <section class="relative h-screen bg-cover bg-center"
-    style="background-image: url('https://media.istockphoto.com/id/1463404970/photo/high-school-students-e-learning-over-computers-in-the-classroom.webp?b=1&s=612x612&w=0&k=20&c=z6ijkmbDGUQ_X-SwYnVrLjXiiUqSpX0HpZZwvCcILAU=');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="container mx-auto px-4 py-24 relative z-10 text-center text-white">
-      <body class="bg-gray-100">
-
-        <!-- Header Section -->
-        <header class="bg-transparent shadow-md z-20  w-screen h-10">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-6">
-      
-              <!-- Logo -->
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+             <img src="assets/img/logo (7).png" alt=""> 
+            <!-- <h1 class="sitename">Shriradheautomobile</h1> -->
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a  href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <!-- <li><a href="team">Team</a></li> -->
+              <!-- <li><a href="blog.html">Blog</a></li> -->
+              <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href=career.html>Career</a></li>
+                  <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Dropdown 1</a></li>
+                      <li><a href="#">Deep Dropdown 2</a></li>
+                      <li><a href="#">Deep Dropdown 3</a></li>
+                      <li><a href="#">Deep Dropdown 4</a></li>
+                      <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                  </li> -->
+                  <li><a href="clients.html">Client</a></li>
+                  <li><a href="support.html">Support</a></li>
+                  <li><a href="businesscollabration.html">Business Collabrations</a></li>
+                </ul>
+              </li>
               
-              <div class="flex-shrink-0 " >
-                <a href="#">
-                  <img src="https://i.ibb.co/WPbch9d/logo.jpg" alt="Inspire CAD Academy Logo" class="max-h-9 w-auto">
-                </a>
-                <a href="#" class="text-2xl font-bold text-white">INSPIRE CAD ACADEMY</a>
-              </div>
-      
-              <!-- Navigation -->
-              <nav class="hidden md:flex space-x-8 bg-transparent">
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">Home</a>
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">About</a>
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">Free Demo Class</a>
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">Courses</a>
-                <!-- <a href="#" class="text-base font-medium text-gray-600 hover:text-gray-900">Courses</a> -->
-                <!-- <li class="relative group text-centser">
-                  <a href="service.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 ">Services</a>
-                  <ul class="absolute hidden text-gray-700 pt-1 group-hover:block ">
-                      <li><a href="#" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Product</a></li>
-                      <li><a href="#" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Carrier</a></li>
-                      <li><a href="#" class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">Partnership</a></li>
-                  </ul>
-              </li> -->
-      
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">Placements</a>
-                <a href="#" class="text-base font-medium text-white hover:text-blue-500">Contact</a>
-                <!-- <a href="#" class="text-base font-medium text-gray-600 hover:text-gray-900">Contact</a> -->
-      
-              </nav>
-      
-              <!-- Call to Action -->
-              <div class="hidden md:flex items-center justify-end">
-                <a href="#"
-                  class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
-                  Get Started
-                </a>
-              </div>
-      
-              <!-- Mobile Menu Button -->
-              <div class="-mr-2 flex md:hidden">
-                <button type="button"
-                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                  aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Mobile Menu -->
-          <!-- <div class="md:hidden" id="mobile-menu">
-                  <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Free Demo Class</a>
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Placements</a>
-                      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Contact</a>
-                  </div>
-              </div> -->
-        </header>
-      
-      <h1 class="text-5xl font-bold">Inspire CAD Academy & School Of Design</h1>
-      <p class="mt-4 text-lg">Learn from us to look at it & contribute to our responsibilities.</p>
-      <a href="#courses" class="mt-8 inline-block bg-blue-600 hover:bg-blue-400 text-white py-3 px-8 rounded-full">Read
-        More</a>
-    </div>
-  </section>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+        </div>
+      </header>
+    
+
+</body>
+</html>
