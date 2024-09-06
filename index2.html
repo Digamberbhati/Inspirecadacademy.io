@@ -8,130 +8,33 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100">
+<body>
+  
+<button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg>
+  </button>
+  
+  <!-- Dropdown menu -->
+  <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+        </li>
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+        </li>
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+        </li>
+        <li>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+        </li>
+      </ul>
+  </div>
+  
 
-  <!-- Header Section -->
-  <header class="bg-white shadow-md z-20 fixed w-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-6">
-
-        <!-- Logo -->
-
-        <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-bold text-gray-900">INSPIRE CAD ACADEMY</a>
-        </div>
-
-        <!-- Navigation -->
-        <nav class="hidden md:flex space-x-8 ">
-          <a href="index.html"
-            class="text-base font-medium rounded text-black  hover:text-white hover:bg-black hover:rounded-lg  ">Home</a>
-          <a href="about.html"
-            class="text-base font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full">About</a>
-          <a href="freedemo.html"
-            class="text-base font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full">Free
-            Demo Class</a>
-          <select class="font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full h w-20">
-            <li><a href="#" target="_blank">
-                <option value="" disabled selected>Courses</option>
-              </a></li>
-
-
-            <option value="bike-service"><a href="graphic Designing.html">Graphic Designing</a></option>
-            <option value=""><a href="fashion.html">Fashion Designing</a></option>
-            <option value=""><a href="computer.html">Computer Training</a></option>
-            <option value=""><a href="civil.html">Civil Engineering</a></option>
-            <option value=""><a href="mechinical.html">Mechanical Engineering</a></option>
-            <option value=""><a href="electrical.html">Electrical Engineering</a></option>
-            <option value=""><a href="architectural.html">Architectural Designing</a></option>
-            <option value=""><a href="interior.html">Interior Designing</a></option>
-          </select>
-
-          <select class="font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full w-24">
-            <li><a href="placment.html" target="_blank">
-                <option value="" disabled selected>Placements</option>
-              </a></li>
-
-            <option value="bike-service">Web Development</option>
-            <option value="car-service">Data Science</option>
-            <option value="other-services">Cybersecurity</option>
-            <option value="other-services">Cloud Computing</option>
-            <option value="other-services">Artificial Intelligence</option>
-            <option value="other-services">DevOps</option>
-            <!-- <option value="other-services">Cybersecurity</option> -->
-          </select>
-          <!-- <a href="#" class="text-base font-medium text-black hover:text-gray-900">Placements</a> -->
-          <a href="contact.html"
-            class="text-base font-medium rounded  text-black hover:text-white hover:bg-black hover:rounded-full">Contact</a>
-          <!-- <a href="#" class="text-base font-medium text-gray-600 hover:text-gray-900">Contact</a> -->
-
-        </nav>
-
-        <!-- Call to Action -->
-        <div class="hidden md:flex items-center justify-end">
-          <a href="#"
-            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
-            Get Started
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Menu -->
-  <!-- <div class="md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Free Demo Class</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Placements</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Contact</a>
-            </div>
-        </div> -->
-  </header>
-
-  <!-- Script for Mobile Menu Toggle -->
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-
-  <!-- Hero Section -->
-
-  <section class="relative h-screen bg-cover bg-center"
-    style="background-image: url('https://media.istockphoto.com/id/1463404970/photo/high-school-students-e-learning-over-computers-in-the-classroom.webp?b=1&s=612x612&w=0&k=20&c=z6ijkmbDGUQ_X-SwYnVrLjXiiUqSpX0HpZZwvCcILAU=');">
-
-
-    <!-- Mobile Menu Button -->
-    <div class="-mr-2 flex md:hidden">
-      <button type="button"
-        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-        aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
-        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-    </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <!-- <div class="md:hidden" id="mobile-menu">
-              <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Free Demo Class</a>
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Placements</a>
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Contact</a>
-              </div>
-          </div> -->
-        </header>
-  </section>
+ 
 </body>
 
 </html>
