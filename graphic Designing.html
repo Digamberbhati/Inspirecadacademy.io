@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
+
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
+
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
+
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  </header>
+<br>
+  <h1 class="text-center text-black text-4xl text-bold">All About Graphic Designing</h1>
+
+  <h2 class="px-28 py-10">Graphic Design is the art and practice of planning and projecting ideas and experiences with visual and textual content. It involves creating and combining symbols, images, and text to form visual representations of ideas and messages. Graphic designers work on a variety of projects, such as logos, branding, packaging, marketing materials, websites, social media graphics, and more.<br>
+<li><b>Key Aspects of Graphic Design:-</b></li><br>
+1.Visual Communication: At its core, graphic design is about communicating visually. It uses elements like color, typography, and images to convey messages effectively.<br>
+
+2.Creative Problem Solving: Graphic designers must understand the client’s needs and translate them into creative solutions. This often involves brainstorming, sketching, and creating multiple design iterations.<br>
+
+3.Software Skills: Proficiency in design software like Adobe Creative Suite (Photoshop, Illustrator, InDesign), Sketch, Figma, and others is essential for creating professional designs.<br>
+
+4.Typography: The art of arranging text in a readable and aesthetically pleasing way. Understanding different fonts and how they affect the perception of the text is crucial for graphic designers.<br>
+
+5.Color Theory: Knowledge of how colors interact, complement, and convey emotions is vital in creating effective designs.<br>
+
+6.Layout and Composition: Arranging elements in a way that guides the viewer’s eye and communicates the intended message clearly and effectively.<br>
+
+7.Branding: Developing a consistent visual identity for a company or product through logo design, color schemes, typography, and imagery.<br>
+
+8.User Experience (UX) Design: In digital design, understanding how users interact with a website or application and creating intuitive, user-friendly designs is increasingly important.
+  </h2>
+
+  <p class="px-28 py-10"><b>Current Scope of Graphic Design:-</b><br>
+    1.High Demand in Digital Marketing:-<br> With the boom in online marketing, businesses require graphic designers for creating engaging social media graphics, advertisements, and other digital marketing materials.
+
+2.Web and Mobile Design:-<br> As more businesses move online, there is a growing need for graphic designers with skills in web design, mobile app design, and UX/UI design.<br>
+
+3.Freelancing Opportunities:-<br> Many companies are hiring freelance designers, providing flexibility and the opportunity to work with various clients across industries.<br>
+
+4.Branding and Identity Design:-<br> Startups, small businesses, and established companies constantly seek fresh and creative designers to help build or revamp their brand identities.<br>
+
+5.Motion Graphics and Animation:-<br> With the rise of video content across platforms like YouTube, TikTok, and Instagram, skills in motion graphics, animation, and video editing are increasingly valuable.<br>
+
+6.E-Learning and Online Content Creation:-<br> The pandemic accelerated the growth of e-learning platforms, creating demand for designers to produce visually appealing and effective learning materials.<br>
+
+7.Augmented and Virtual Reality (AR/VR):-<br> As AR and VR technologies grow, graphic designers are needed to create immersive and interactive visual content.<br>
+
+8.Packaging Design: With the growth of e-commerce, there is an increasing need for packaging designs that are both attractive and functional, catering to a variety of consumer products.<br>
+</p>
+
+</body>
+</html>
