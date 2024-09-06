@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architectural Engineering</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
+
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
+
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
+
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  </header>
+<!-- Image Section -->
+
+<!-- Image Section -->
+<div class="flex justify-center py-10 bg-black">
+    <img src="Architectural Engineering.jpg" alt="Mechanical Engineering Work" class="w-full max-w-4xl rounded-lg shadow-lg">
+  </div>
+  
+  
+<section class="text-white bg-black">
+    <h1 class="text-center text-white text-4xl font-bold">All About Architectural Engineering</h1>
+  
+    <h2 class="px-28 py-10">
+      Architectural Engineering focuses on the design, construction, and maintenance of buildings and other structures, ensuring that they are functional, safe, and aesthetically pleasing. This field combines principles of architecture with engineering practices to create structures that meet both design and performance criteria. Architectural engineers work on various aspects of building design, including structural integrity, mechanical systems, and energy efficiency.
+      <br><br>
+  
+      <li><b>Key Aspects of Architectural Engineering:</b></li><br>
+      1.Structural Systems:- Understanding and designing the structural framework of buildings to ensure stability and safety. This includes the use of materials like steel, concrete, and wood.
+      <br><br>
+      2.Building Systems Design:- Designing mechanical, electrical, and plumbing (MEP) systems to ensure functionality and efficiency. This includes heating, ventilation, air conditioning (HVAC), lighting, and water systems.
+      <br><br>
+      3.Sustainability and Energy Efficiency:- Incorporating sustainable design practices to minimize environmental impact. This includes energy-efficient systems, renewable energy integration, and sustainable materials.
+      <br><br>
+      4.Construction Management:- Overseeing the construction process to ensure that projects are completed on time, within budget, and according to design specifications. This includes coordinating with contractors and managing resources.
+      <br><br>
+      5.Building Codes and Regulations:- Ensuring that designs comply with local building codes, regulations, and safety standards. This includes understanding zoning laws and accessibility requirements.
+      <br><br>
+      6.Architectural Design:- Collaborating with architects to translate design concepts into feasible engineering solutions. This includes the aesthetic and functional aspects of building design.
+      <br><br>
+      7.Materials Science:- Knowledge of building materials and their properties, including durability, strength, and thermal performance. This helps in selecting appropriate materials for different building elements.
+      <br><br>
+      8.Acoustics and Lighting Design:- Designing acoustic solutions and lighting systems to enhance the comfort and functionality of spaces. This includes soundproofing and optimizing natural and artificial lighting.
+    </h2>
+  
+    <p class="px-28 py-10">
+      <b>Current Scope of Architectural Engineering:</b><br>
+      1.Green Building Design:-<br> With a growing focus on environmental sustainability, architectural engineers are increasingly involved in designing green buildings that utilize sustainable practices and materials.
+      <br><br>
+      2.Smart Buildings:-<br> Engineers are working on integrating advanced technologies into building systems, including smart sensors, automation, and building management systems.
+      <br><br>
+      3.Urban Planning and Development:-<br> Architectural engineers play a role in urban planning, designing structures that fit into larger urban environments and contribute to community development.
+      <br><br>
+      4.Restoration and Preservation:-<br> Engineers work on the restoration and preservation of historic buildings, ensuring that renovations maintain architectural integrity while meeting modern standards.
+      <br><br>
+      5.Disaster Resilience:-<br> Designing buildings that can withstand natural disasters and other hazards, improving the safety and resilience of structures.
+      <br><br>
+      6.High-Rise and Skyscraper Design:-<br> Involvement in the design and construction of high-rise buildings and skyscrapers, addressing challenges related to height, wind loads, and vertical transportation.
+      <br><br>
+      7.Healthcare and Educational Facilities:-<br> Specialized design and engineering for healthcare and educational facilities, focusing on functionality, safety, and specialized requirements.
+      <br><br>
+      8.Residential and Commercial Projects:-<br> Working on a variety of residential and commercial projects, from single-family homes to large commercial complexes, ensuring that they meet both aesthetic and engineering standards.
+    </p>
+  </section>
+
+<footer class="bg-black text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap -mx-4">
+        <!-- About Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+          <p class="text-gray-400">
+            At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
+            enhance your skills and knowledge in the ever-evolving tech industry.
+          </p>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
+            <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
+            <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+            <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
+            <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
+            <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
+
+          </ul>
+        </div>
+        <!-- Services Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Courses</h3>
+          <ul>
+
+
+            <li><a href="graphic Designing.html"  target="_blank" class="text-white hover:text-blue-500">Graphic Designing</a></li>
+            <li><a href="fashion.html" target="_blank" class="text-white hover:text-blue-500">Fashion Designing</a></li>
+            <li><a href="computer.html" target="_blank" class="text-white hover:text-blue-500">Computer Training</a></li>
+            <li><a href="civil.html" target="_blank" class="text-white hover:text-blue-500">Civil Engineering</a></li>
+            <li><a href="mechinical.html" target="_blank" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
+            <li><a href="electrical.html" target="_blank" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
+            <li><a href="architectural.html" target="_blank" class="text-white hover:text-blue-500">Architectural Designing</a></li>
+            <li><a href="interior.html" target="_blank" class="text-white hover:text-blue-500">Interior Designing</a></li>
+          </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="w-full md:w-1/4 px-4">
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+          <p class="text-gray-400">Email: info@inspireacademy.com</p>
+          <p class="text-gray-400">Phone: +1 234 567 890</p>
+          <!-- Social Media Icons -->
+          <div class="mt-6 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+        <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</section>
+
+
+</body>
+
+</html>
