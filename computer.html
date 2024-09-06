@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Training</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
+
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
+
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
+
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  </header>
+<section class="bg-black">
+ <!-- Image Section -->
+ <div class="flex justify-center py-10">
+    <img src="computer Traing.avif" alt="Computer Working Girl" class="w-full max-w-3xl rounded-lg shadow-lg">
+  </div>
+
+    <h1 class="text-center text-white text-4xl font-bold py-10">All About Computer Training</h1>
+  
+    <h2 class="px-28 py-10 text-white">
+      Computer Training involves the acquisition of skills and knowledge required to effectively use computers and technology in various professional and personal contexts. It covers a wide range of topics, from basic computer operations to advanced programming and IT management. The goal of computer training is to equip individuals with the skills needed to succeed in today’s technology-driven world.
+      <br><br>
+  
+      <li><b>Key Aspects of Computer Training:</b></li><br>
+      1.Basic Computer Literacy: Understanding fundamental computer operations, including using operating systems, file management, and basic software applications. This forms the foundation for more advanced training.
+      <br><br>
+      2.Software Proficiency: Learning to use various software applications, such as word processors, spreadsheets, and presentation tools. Proficiency in software like Microsoft Office or Google Workspace is crucial for most jobs.
+      <br><br>
+      3.Programming and Development: Acquiring skills in programming languages such as Python, Java, or JavaScript. This includes learning to write, debug, and optimize code, as well as understanding software development methodologies.
+      <br><br>
+      4.Networking and IT Support: Gaining knowledge in networking concepts, setting up and maintaining networks, and providing IT support. This includes understanding network protocols, hardware, and troubleshooting common issues.
+      <br><br>
+      5.Cybersecurity: Learning about protecting computer systems and data from cyber threats. This includes understanding security best practices, threat detection, and response strategies.
+      <br><br>
+      6.Database Management: Understanding how to design, implement, and manage databases. This includes learning about database management systems (DBMS) and querying languages like SQL.
+      <br><br>
+      7.Web Development: Learning to build and maintain websites, including understanding HTML, CSS, JavaScript, and content management systems (CMS) like WordPress.
+      <br><br>
+      8.Project Management Tools: Familiarity with tools and methodologies for managing technology projects. This includes using project management software and understanding methodologies like Agile and Scrum.
+    </h2>
+  
+    <p class="px-28 py-10 text-white">
+      <b>Benefits of Computer Training:</b><br>
+      1.Enhanced Job Opportunities:<br> Acquiring computer skills increases employability and opens up various career opportunities in fields like IT, software development, and data analysis.
+      <br><br>
+      2.Increased Productivity:<br> Proficiency in computer applications and tools leads to improved efficiency and productivity in both personal and professional tasks.
+      <br><br>
+      3.Career Advancement:<br> Specialized computer training can lead to career advancement opportunities, such as promotions or transitions into more technical roles.
+      <br><br>
+      4.Adaptability to Technology Changes:<br> Staying updated with the latest technology trends and tools ensures adaptability in a rapidly evolving tech landscape.
+      <br><br>
+      5.Problem-Solving Skills:<br> Computer training enhances problem-solving skills by teaching individuals how to approach and solve technical challenges.
+      <br><br>
+      6.Enhanced Digital Communication:<br> Skills in using various digital communication tools and platforms improve collaboration and interaction in both personal and professional settings.
+      <br><br>
+      7.Better Data Management:<br> Learning to use databases and data analysis tools helps in managing and interpreting large amounts of data effectively.
+      <br><br>
+      8.Increased Confidence:<br> Gaining computer skills builds confidence in handling technology, which is valuable in today’s digital world.
+    </p>
+  </section>
+  
+  <!--Footer-->
+
+  <footer class="bg-black text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap -mx-4">
+        <!-- About Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+          <p class="text-gray-400">
+            At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
+            enhance your skills and knowledge in the ever-evolving tech industry.
+          </p>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
+            <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
+            <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+            <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
+            <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
+            <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
+
+          </ul>
+        </div>
+        <!-- Services Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Courses</h3>
+          <ul>
+
+
+            <li><a href="graphic Designing.html"  target="_blank" class="text-white hover:text-blue-500">Graphic Designing</a></li>
+            <li><a href="fashion.html" target="_blank" class="text-white hover:text-blue-500">Fashion Designing</a></li>
+            <li><a href="computer.html" target="_blank" class="text-white hover:text-blue-500">Computer Training</a></li>
+            <li><a href="civil.html" target="_blank" class="text-white hover:text-blue-500">Civil Engineering</a></li>
+            <li><a href="mechinical.html" target="_blank" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
+            <li><a href="electrical.html" target="_blank" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
+            <li><a href="architectural.html" target="_blank" class="text-white hover:text-blue-500">Architectural Designing</a></li>
+            <li><a href="interior.html" target="_blank" class="text-white hover:text-blue-500">Interior Designing</a></li>
+          </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="w-full md:w-1/4 px-4">
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+          <p class="text-gray-400">Email: info@inspireacademy.com</p>
+          <p class="text-gray-400">Phone: +1 234 567 890</p>
+          <!-- Social Media Icons -->
+          <div class="mt-6 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+        <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</section>
+
+
+</body>
+
+</html>

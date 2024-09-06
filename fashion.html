@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Designing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+</head>
+
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
+
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
+
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
+
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  </header>
+  <!-- Image Section -->
+  <div class="flex justify-center py-10 bg-black">
+    <img src="fashion design.avif" alt="Fashion Designer Working" class="w-full max-w-4xl rounded-lg shadow-lg">
+  </div>
+
+<section class="bg-black">
+    <h1 class="text-center text-white text-4xl font-bold py-10">All About Fashion Designing</h1>
+  
+    <h2 class="px-28 py-10 text-white">
+      Fashion Designing is the art of applying design, aesthetics, clothing construction, and natural beauty to clothing and its accessories. It is influenced by cultural and social attitudes, and has evolved over time and place. Fashion designers work in a number of ways in designing clothing and accessories such as bracelets and necklaces. Due to the time required to bring a garment onto the market, designers must at times anticipate changes to consumer tastes.
+      <br><br>
+  
+      <li><b>Key Aspects of Fashion Designing:</b></li><br>
+      1.Creativity and Innovation:** Fashion designing is fundamentally a creative process. Designers are required to think out of the box, conceptualize new ideas, and bring innovation to garments, accessories, and styling.
+      <br><br>
+      2.Understanding Fabrics and Textures:** Knowledge of various fabrics, textures, patterns, and how they behave is essential. This includes understanding how materials drape, their durability, and their suitability for different types of garments.
+      <br><br>
+      3.Trend Analysis:** Fashion designers need to be in tune with current and future fashion trends. They must understand what appeals to different demographics and cultures, and forecast future trends to create relevant collections.
+      <br><br>
+      4.Fashion Illustration and Sketching:** Designers must be adept at illustrating their ideas through sketches. Fashion illustration is a key skill that helps communicate design concepts to pattern makers, tailors, and clients.
+      <br><br>
+      5.Pattern Making and Sewing Techniques:** Understanding the basics of pattern making and sewing techniques is crucial. It enables designers to create a garment from scratch, ensuring a good fit and aesthetic appeal.
+      <br><br>
+      6.Marketing and Brand Development:** Knowledge of fashion marketing, merchandising, and brand development is necessary for designers to effectively promote their collections and establish their brand identity.
+      <br><br>
+      7.Computer-Aided Design (CAD):** Modern fashion designing heavily relies on CAD software for creating patterns, designs, and presentations. Familiarity with CAD tools is essential for creating digital designs quickly and accurately.
+      <br><br>
+      8.Sustainable and Ethical Fashion:** Increasingly, there is a focus on sustainable fashion, using eco-friendly materials, ethical production methods, and waste reduction practices. Designers are expected to integrate sustainability into their design process.
+    </h2>
+  
+    <p class="px-28 py-10 text-white">
+      <b>Current Scope of Fashion Designing:</b><br>
+      1.High Demand in E-commerce:**<br> With the growth of online shopping, fashion designers are in demand for creating digital content, including styling videos, social media graphics, and digital lookbooks.
+      <br><br>
+      2.Sustainable Fashion:**<br> There is a growing emphasis on sustainable fashion. Designers who specialize in eco-friendly materials and ethical production methods are increasingly sought after.
+      <br><br>
+      3.Freelancing and Entrepreneurship:**<br> Many fashion designers are venturing into freelancing or starting their own brands, providing opportunities to explore unique styles and build a personal brand.
+      <br><br>
+      4.Collaborations and Consulting:**<br> Fashion designers often collaborate with other creatives, such as photographers, models, and influencers, or consult for fashion houses, brands, and media.
+      <br><br>
+      5.Fashion Technology:**<br> With the rise of wearable technology and smart textiles, designers with a background in technology and fashion have new opportunities in creating innovative garments and accessories.
+      <br><br>
+      6.Custom and Bespoke Design:**<br> There is a growing market for custom and bespoke fashion, allowing designers to cater to individual client needs and tastes, offering personalized services.
+      <br><br>
+      7.Fashion Education and Blogging:**<br> Fashion designers can explore opportunities in teaching fashion design courses, mentoring aspiring designers, or blogging about fashion trends and styling tips.
+      <br><br>
+      8.Virtual Fashion Shows and Digital Fashion:**<br> With technological advancements, there is a rise in virtual fashion shows and digital fashion design, providing innovative platforms for designers to showcase their work globally.
+    </p>
+  </section>
+  
+  <!--Footer-->
+
+  <footer class="bg-black text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap -mx-4">
+        <!-- About Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+          <p class="text-gray-400">
+            At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
+            enhance your skills and knowledge in the ever-evolving tech industry.
+          </p>
+        </div>
+        <!-- Quick Links Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
+            <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
+            <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+            <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
+            <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
+            <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
+
+          </ul>
+        </div>
+        <!-- Services Section -->
+        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+          <h3 class="text-xl font-semibold mb-4">Courses</h3>
+          <ul>
+
+
+            <li><a href="graphic Designing.html"  target="_blank" class="text-white hover:text-blue-500">Graphic Designing</a></li>
+            <li><a href="fashion.html" target="_blank" class="text-white hover:text-blue-500">Fashion Designing</a></li>
+            <li><a href="computer.html" target="_blank" class="text-white hover:text-blue-500">Computer Training</a></li>
+            <li><a href="civil.html" target="_blank" class="text-white hover:text-blue-500">Civil Engineering</a></li>
+            <li><a href="mechinical.html" target="_blank" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
+            <li><a href="electrical.html" target="_blank" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
+            <li><a href="architectural.html" target="_blank" class="text-white hover:text-blue-500">Architectural Designing</a></li>
+            <li><a href="interior.html" target="_blank" class="text-white hover:text-blue-500">Interior Designing</a></li>
+          </ul>
+        </div>
+        <!-- Contact Section -->
+        <div class="w-full md:w-1/4 px-4">
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+          <p class="text-gray-400">Email: info@inspireacademy.com</p>
+          <p class="text-gray-400">Phone: +1 234 567 890</p>
+          <!-- Social Media Icons -->
+          <div class="mt-6 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+        <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</section>
+
+
+</body>
+
+</html>
