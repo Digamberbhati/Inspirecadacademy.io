@@ -4,119 +4,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>inspireacademy</title>
+  <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
 </head>
 
-<body class="bg-gray-100">
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
 
-  <!-- Header Section -->
-  <header class="bg-white shadow-md z-20 fixed w-screen">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-6">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
 
-        <!-- Logo -->
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
 
-        <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-bold text-gray-900">INSPIRE CAD ACADEMY</a>
-        </div>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
 
-        <!-- Navigation -->
-        <nav class="hidden md:flex space-x-8 ">
-          <a href="index.html" class="text-base font-medium rounded text-black  hover:text-white hover:bg-black hover:rounded-lg  ">Home</a>
-          <a href="about.html" class="text-base font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full">About</a>
-          <a href="freedemo.html" class="text-base font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full">Free Demo Class</a>
-                    <select class="font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full h w-20">
-            <li><a href="#" target="_blank">
-                <option value="" disabled selected>Courses</option>
-              </a></li>
+              </ul>
 
-            
-              <option value="bike-service"><a href="graphic Designing.html"> Web Development</a></option>
-            <option value=""><a href="fashion.html">Fashion Designing</a></option>
-            <option value=""><a href="computer.html">Computer Training</a></option>
-            <option value=""><a href="civil.html">Civil Engineering</a></option>
-            <option value=""><a href="mechinical.html">Mechanical Engineering</a></option>
-            <option value=""><a href="electrical.html">Electrical Engineering</a></option>
-            <option value=""><a href="architectural.html">Architectural Designing</a></option>
-            <option value=""><a href="interior.html">Interior Designing</a></option>
-          </select>
+            </div>
 
-          <select class="font-medium rounded text-black hover:text-white hover:bg-black hover:rounded-full w-24">
-            <li><a href="placment.html" target="_blank">
-                <option value="" disabled selected>Placements</option>
-              </a></li>
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
 
-            <option value="bike-service">Web Development</option>
-            <option value="car-service">Data Science</option>
-            <option value="other-services">Cybersecurity</option>
-            <option value="other-services">Cloud Computing</option>
-            <option value="other-services">Artificial Intelligence</option>
-            <option value="other-services">DevOps</option>
-            <!-- <option value="other-services">Cybersecurity</option> -->
-          </select>
-          <!-- <a href="#" class="text-base font-medium text-black hover:text-gray-900">Placements</a> -->
-          <a href="contact.html" class="text-base font-medium rounded  text-black hover:text-white hover:bg-black hover:rounded-full">Contact</a>
-          <!-- <a href="#" class="text-base font-medium text-gray-600 hover:text-gray-900">Contact</a> -->
-
-        </nav>
-
-        <!-- Call to Action -->
-        <div class="hidden md:flex items-center justify-end">
-          <a href="#"
-            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
-            Get Started
-          </a>
-        </div>
+        </ul>
       </div>
     </div>
-  </header>
+
+  </nav>
+
+
+
+
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+<section class="relative h-screen bg-cover bg-center"
+  style="background-image: url('https://media.istockphoto.com/id/1463404970/photo/high-school-students-e-learning-over-computers-in-the-classroom.webp?b=1&s=612x612&w=0&k=20&c=z6ijkmbDGUQ_X-SwYnVrLjXiiUqSpX0HpZZwvCcILAU=');">
+
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
 
   <!-- Mobile Menu -->
   <!-- <div class="md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Free Demo Class</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Placements</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Contact</a>
-            </div>
-        </div> -->
-  </header>
-
-  <!-- Script for Mobile Menu Toggle -->
-  <script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-
-  <!-- Hero Section -->
-
-  <section class="relative h-screen bg-cover bg-center"
-    style="background-image: url('https://media.istockphoto.com/id/1463404970/photo/high-school-students-e-learning-over-computers-in-the-classroom.webp?b=1&s=612x612&w=0&k=20&c=z6ijkmbDGUQ_X-SwYnVrLjXiiUqSpX0HpZZwvCcILAU=');">
-
-
-    <!-- Mobile Menu Button -->
-    <div class="-mr-2 flex md:hidden">
-      <button type="button"
-        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-        aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
-        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-          aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-    </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <!-- <div class="md:hidden" id="mobile-menu">
               <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
                   <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
@@ -125,629 +171,634 @@
                   <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Contact</a>
               </div>
           </div> -->
-    </header>
+  </header>
 
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="container mx-auto px-4 py-24 relative z-10 text-center text-white">
-      <h1 class="text-5xl font-bold">Inspire CAD Academy & School Of Design</h1>
-      <p class="mt-4 text-lg">Learn from us to look at it & contribute to our responsibilities.</p>
-      <a href="#courses" class="mt-8 inline-block bg-blue-600 hover:bg-blue-400 text-white py-3 px-8 rounded-full">Read
-        More</a>
-    </div>
-  </section>
-
-
-  <!--About us-->
-  <section class="py-12 px-6 bg-black">
-    <div class="max-w-4xl mx-auto flex flex-col lg:flex-row items-center">
-      <!-- Text Section -->
-      <div class="lg:w-1/2 lg:pr-8">
-        <h2 class="text-3xl font-bold mb-4 text-white">About Inspire Group</h2>
-        <h3 class="text-2xl font-bold mb-3 text-white">We aim to empower students to change the world</h3>
-        <p class="text-white mb-4">
-          Inspire Group is a leading architecture, construction, and interior design firm that is
-          dedicated to providing high-quality services to its clients. With years of experience in
-          the industry, the firm has established itself as a reliable and innovative partner for all
-          kinds of building projects. Inspire Group's team of experts are highly skilled in their
-          respective fields and are committed to delivering exceptional results that meet the
-          needs and exceed the expectations of their clients. The firm is also dedicated to
-          promoting growth and development in the industry by providing training and
-          mentorship programs to aspiring architects, builders, and interior designers. The
-          Inspire Group office is a dynamic and creative workspace that reflects the firm's
-          values of innovation, collaboration, and excellence.
-        </p>
-        <p class="text-white">
-          He as spoke avoid given downs money on we. Of properly carriage shutters ye as wandered up repeated moreover.
-        </p>
-      </div>
-      <!-- Image Section -->
-      <div class="lg:w-1/2 mt-8 lg:mt-0">
-        <img src="https://img.freepik.com/free-photo/this-looks-really-good-we-can-accept-it_329181-15094.jpg" alt="About Work Image"
-          class="w-full h-auto  rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-      </div>
-    </div>
-    <div class="mt-8 flex justify-around">
-      <div class="text-center">
-        <i class="fas fa-mobile-alt text-white text-3xl"></i>
-        <p class="mt-2 text-white">Sample text. Click to select the text box.</p>
-      </div>
-      <div class="text-center">
-        <i class="fas fa-map-marker-alt text-white text-3xl"></i>
-        <p class="mt-2 text-white">Sample text. Click to select the text box.</p>
-      </div>
-    </div>
-  </section>
-  <!--Academic section-->
-
-  <!-- Our Academics Section -->
-  <section id="academics" class="py-16 bg-black">
-    <div class="container mx-auto px-4">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-white">Our Academics</h2>
-        <p class="mt-4 text-lg text-white">As an architecture, construction, and interior design firm, the Inspire Group
-          may
-          have an academic department or program that focuses on educating and training
-          individuals in these fields. This academic department could offer a range of courses,
-          workshops, and training programs designed to help individuals develop the
-          knowledge and skills necessary to succeed in these industries.
-          In addition to formal academic courses, the Inspire Group might also provide
-          opportunities for mentorship, internships, and on-the-job training to help individuals
-          gain practical experience and develop their skills. By offering a range of academic
-          and professional development opportunities, the Inspire Group can help individuals
-          build the knowledge and expertise they need to succeed in the architecture,
-          construction, and interior design industries.</p>
-      </div>
-
-      <!-- Resources Section -->
-      <section id="resources" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-          <!-- Section Header -->
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800">Our Resources</h2>
-            <p class="mt-4 text-lg text-gray-600">Expand Your knowledge toolkit by leading from the most prominent
-              exerts.</p>
-          </div>
-
-          <!-- Resources Grid -->
-          <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Resource Card 1: Human Capital -->
-            <div
-              class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
-              <!-- <img src="https://via.placeholder.com/150" alt="Human Capital" class="w-24 h-24 mx-auto mb-4"> -->
-              <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Human Capital</h3>
-              <p class="text-gray-600 text-center">Inspire Group's team of architects, interior designers, project
-                managers, and support staff is
-                likely one of their most valuable...</p>
-            </div>
-
-            <!-- Resource Card 2: Technology -->
-            <div
-              class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
-              <!-- <img src="https://via.placeholder.com/150" alt="Technology" class="w-24 h-24 mx-auto mb-4"> -->
-              <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Technology And Equipments</h3>
-              <p class="text-gray-600 text-center">Another important resource for Inspire Group is the technology and
-                equipment they use to
-                design and execute their projects.</p>
-            </div>
-
-            <!-- Resource Card 3: Equipments -->
-            <div
-              class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
-              <!-- <img src="https://via.placeholder.com/150" alt="Human Capital" class="w-24 h-24 mx-auto mb-4"> -->
-              <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Reputation And Branding</h3>
-              <p class="text-gray-600 text-center">Finally, Inspire Group's reputation and brand are crucial resources
-                for their success. A
-                positive reputation for delivering high-quality...</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <!-- Motivation Content Section -->
-      <section id="motivation" class="relative py-16 bg-gray-200 flex justify-center items-center min-h-screen">
-        <div class="max-w-screen-md px-6 text-center">
-          <!-- Motivational Quote -->
-          <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-800 leading-snug">
-            "Success is not final, failure is not fatal; it is the courage to continue that counts."
-          </h2>
-        </div>
-
-        <!-- Button at Bottom Left -->
-        <div class="absolute bottom-10 left-10">
-          <button
-            class="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-blue-600 hover:shadow-lg transition duration-300">
-            Join The Success
-          </button>
-        </div>
-      </section>
-
-<!-- Why Enroll In Our Program Section -->
-<section id="why-enroll" class="py-16 bg-white">
-  <div class="container mx-auto px-6 text-center">
-    <!-- Section Title -->
-    <h2 class="text-4xl font-bold text-gray-800 mb-12">Why Enroll In Our Program</h2>
-    
-    <!-- Content Cards -->
-    <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Self-paced Program Card -->
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Self-paced Program</h3>
-        <p class="text-gray-600">
-          Learn at your own pace with our flexible programs that fit your schedule. No deadlines, no stress — complete the course at your speed.
-        </p>
-      </div>
-
-      <!-- Simple Online Enrollment Card -->
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Simple Online Enrollment</h3>
-        <p class="text-gray-600">
-          Enrolling is easy! With our streamlined online process, you can register for any course within minutes from the comfort of your home.
-        </p>
-      </div>
-
-      <!-- Professional Mentors Card -->
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Mentors</h3>
-        <p class="text-gray-600">
-          Our experienced mentors guide you through every step of the learning journey, providing personalized support and valuable feedback.
-        </p>
-      </div>
-    </div>
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="container mx-auto px-4 py-24 relative z-10 text-center text-white">
+    <h1 class="text-5xl font-bold">Inspire CAD Academy & School Of Design</h1>
+    <p class="mt-4 text-lg">Learn from us to look at it & contribute to our responsibilities.</p>
+    <a href="#courses" class="mt-8 inline-block bg-blue-600 hover:bg-blue-400 text-white py-3 px-8 rounded-full">Read
+      More</a>
   </div>
 </section>
 
-      <!--Course section-->
 
-      <section class="bg-black py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-center text-white mb-12">Courses Offered</h2>
-          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Course 1 --> <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Graphic Designing</h3>
-              <p class="text-gray-600 mb-4">Graphic design can benefit participants in
-                many ways, including:</p>
-              <a href="graphic Designing.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            
-            <!-- Course 2 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Fashion Designing</h3>
-              <p class="text-gray-600 mb-4">Fashion designing can benefit participants in many
-                ways, including.</p>
-              <a href="fashion.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <!-- Course 3 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Computer Training</h3>
-              <p class="text-gray-600 mb-4">Computer training in the design and multimedia
-                category typically focuses on teaching individuals how to use various design and multimedia software
-                to create graphics,.</p>
-              <a href="computer.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <!-- Course 4 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Civil Engineering</h3>
-              <p class="text-gray-600 mb-4">Civil engineering is a field of study that involves the
-                design, construction, and maintenance of infrastructure such as buildings, bridges, roads, and water
-                systems.</p>
-              <a href="civil.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <!-- Course 5 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Mechanical Engineering</h3>
-              <p class="text-gray-600 mb-4">Mechanical engineering is a field of study that focuses on the design,
-                analysis, and manufacturing of mechanical systems and machines</p>
-              <a href="mechinical.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <!-- Course 6 -->
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Electrical Engineering</h3>
-              <p class="text-gray-600 mb-4">Electrical engineering is a field of study that focuses on the design,
-                analysis, and application of electrical systems and devices. .</p>
-              <a href="electrical.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Architectural Designing</h3>
-              <p class="text-gray-600 mb-4">Participants in architectural designing training will gain knowledge and
-                skills in areas such as design principles, spatial planning, construction technology,</p>
-              <a href="architectural.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
-              <h3 class="text-xl font-semibold text-gray-800 mb-4">Interior Designing</h3>
-              <p class="text-gray-600 mb-4">Participants in interior designing training will gain knowledge and skills
-                in areas such as color theory, space planning, furniture design, lighting design,</p>
-              <a href="interior.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Why we choose section-->
-
-      <section class="bg-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose Us</h2>
-          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Feature 1 -->
-            <div
-              class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
-              <div class="mb-4 text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-white mb-2">Flexible Learning</h3>
-              <p class="text-white">Choose from a variety of learning formats, including in-person and online courses,
-                to
-                fit your schedule.</p>
-            </div>
-            <!-- Feature 4 -->
-            <div
-              class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
-              <div class="mb-4 text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M20 21v-4a4 4 0 00-4-4h-2a4 4 0 00-4 4v4" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-white mb-2">Career Support</h3>
-              <p class="text-white">Benefit from our dedicated career services team to help you land your dream job
-                after
-                graduation.</p>
-            </div>
-           
-            <!-- Feature 6 -->
-            <div
-              class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
-              <div class="mb-4 text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8c-4.2 0-8 2-8 4v3h16v-3c0-2-3.8-4-8-4z" />
-                  <circle cx="12" cy="5" r="3" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-white mb-2">Community & Networking</h3>
-              <p class="text-white">Join a community of like-minded individuals and connect with industry professionals
-                through our events.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Testimonials-->
-
-      <section class="bg-gray-100 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Students Say</h2>
-          <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
-                  <p class="text-sm text-gray-600">Web Development</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"The course was comprehensive and well-structured. The instructors were
-                knowledgeable, and I feel confident in my new skills."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">Jane Smith</h3>
-                  <p class="text-sm text-gray-600">Data Science</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"An amazing learning experience! The hands-on approach and expert guidance
-                helped me gain deep insights."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <!-- 5-star rating same as above -->
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
-                  <p class="text-sm text-gray-600">Cybersecurity</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
-                I
-                feel well-prepared for my career."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <!-- 5-star rating same as above -->
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-
-
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
-                  <p class="text-sm text-gray-600">Cybersecurity</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
-                I
-                feel well-prepared for my career."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <!-- 5-star rating same as above -->
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
-                  <p class="text-sm text-gray-600">Cybersecurity</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
-                I
-                feel well-prepared for my career."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <!-- 5-star rating same as above -->
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-              <div class="flex items-center mb-4">
-
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
-                  <p class="text-sm text-gray-600">Cybersecurity</p>
-                </div>
-              </div>
-              <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
-                I
-                feel well-prepared for my career."</p>
-              <!-- Star Rating -->
-              <div class="flex">
-                <!-- 5-star rating same as above -->
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
-                  </path>
-                </svg>
-              </div>
-            </div>
-
-
-
-
-
-      </section>
-      </Container>
-      <footer class="bg-black text-white py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex flex-wrap -mx-4">
-            <!-- About Section -->
-            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-              <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
-              <p class="text-gray-400">
-                At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
-                enhance your skills and knowledge in the ever-evolving tech industry.
-              </p>
-            </div>
-            <!-- Quick Links Section -->
-            <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-              <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-              <ul>
-                <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
-                <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
-                <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
-                <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
-                <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
-
-          </ul>
-        </div>
-        <!-- Services Section -->
-        <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-          <h3 class="text-xl font-semibold mb-4">Courses</h3>
-          <ul>
-
-            
-            <li><a href="graphic Designing.html" class="text-white hover:text-blue-500">Graphic Designing</a></li>
-            <li><a href="fashion.html" class="text-white hover:text-blue-500">Fashion Designing</a></li>
-            <li><a href="computer.html" class="text-white hover:text-blue-500">Computer Training</a></li>
-            <li><a href="civil.html" class="text-white hover:text-blue-500">Civil Engineering</a></li>
-            <li><a href="mechinical.html" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
-            <li><a href="electrical.html" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
-            <li><a href="architectural.html" class="text-white hover:text-blue-500">Architectural Designing</a></li>
-            <li><a href="interior.html" class="text-white hover:text-blue-500">Interior Designing</a></li>
-          </ul>
-        </div>
-        <!-- Contact Section -->
-        <div class="w-full md:w-1/4 px-4">
-          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
-          <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
-          <p class="text-gray-400">Email: info@inspireacademy.com</p>
-          <p class="text-gray-400">Phone: +1 234 567 890</p>
-          <!-- Social Media Icons -->
-          <div class="mt-6 flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <!-- Bottom Footer -->
-      <div class="mt-10 border-t border-gray-800 pt-6 text-center">
-        <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
-      </div>
+<!--About us-->
+<section class="py-12 px-6 bg-black">
+  <div class="max-w-4xl mx-auto flex flex-col lg:flex-row items-center">
+    <!-- Text Section -->
+    <div class="lg:w-1/2 lg:pr-8">
+      <h2 class="text-3xl font-bold mb-4 text-white">About Inspire Group</h2>
+      <h3 class="text-2xl font-bold mb-3 text-white">We aim to empower students to change the world</h3>
+      <p class="text-white mb-4">
+        Inspire Group is a leading architecture, construction, and interior design firm that is
+        dedicated to providing high-quality services to its clients. With years of experience in
+        the industry, the firm has established itself as a reliable and innovative partner for all
+        kinds of building projects. Inspire Group's team of experts are highly skilled in their
+        respective fields and are committed to delivering exceptional results that meet the
+        needs and exceed the expectations of their clients. The firm is also dedicated to
+        promoting growth and development in the industry by providing training and
+        mentorship programs to aspiring architects, builders, and interior designers. The
+        Inspire Group office is a dynamic and creative workspace that reflects the firm's
+        values of innovation, collaboration, and excellence.
+      </p>
+      <p class="text-white">
+        He as spoke avoid given downs money on we. Of properly carriage shutters ye as wandered up repeated moreover.
+      </p>
     </div>
-  </footer>
+    <!-- Image Section -->
+    <div class="lg:w-1/2 mt-8 lg:mt-0">
+      <img src="https://img.freepik.com/free-photo/this-looks-really-good-we-can-accept-it_329181-15094.jpg"
+        alt="About Work Image"
+        class="w-full h-auto  rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+    </div>
   </div>
-  </section>
+  <div class="mt-8 flex justify-around">
+    <div class="text-center">
+      <i class="fas fa-mobile-alt text-white text-3xl"></i>
+      <p class="mt-2 text-white">Sample text. Click to select the text box.</p>
+    </div>
+    <div class="text-center">
+      <i class="fas fa-map-marker-alt text-white text-3xl"></i>
+      <p class="mt-2 text-white">Sample text. Click to select the text box.</p>
+    </div>
+  </div>
+</section>
+<!--Academic section-->
+
+<!-- Our Academics Section -->
+<section id="academics" class="py-16 bg-black">
+  <div class="container mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white">Our Academics</h2>
+      <p class="mt-4 text-lg text-white">As an architecture, construction, and interior design firm, the Inspire Group
+        may
+        have an academic department or program that focuses on educating and training
+        individuals in these fields. This academic department could offer a range of courses,
+        workshops, and training programs designed to help individuals develop the
+        knowledge and skills necessary to succeed in these industries.
+        In addition to formal academic courses, the Inspire Group might also provide
+        opportunities for mentorship, internships, and on-the-job training to help individuals
+        gain practical experience and develop their skills. By offering a range of academic
+        and professional development opportunities, the Inspire Group can help individuals
+        build the knowledge and expertise they need to succeed in the architecture,
+        construction, and interior design industries.</p>
+    </div>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800">Our Resources</h2>
+          <p class="mt-4 text-lg text-gray-600">Expand Your knowledge toolkit by leading from the most prominent
+            exerts.</p>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Resource Card 1: Human Capital -->
+          <div
+            class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/150" alt="Human Capital" class="w-24 h-24 mx-auto mb-4"> -->
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Human Capital</h3>
+            <p class="text-gray-600 text-center">Inspire Group's team of architects, interior designers, project
+              managers, and support staff is
+              likely one of their most valuable...</p>
+          </div>
+
+          <!-- Resource Card 2: Technology -->
+          <div
+            class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/150" alt="Technology" class="w-24 h-24 mx-auto mb-4"> -->
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Technology And Equipments</h3>
+            <p class="text-gray-600 text-center">Another important resource for Inspire Group is the technology and
+              equipment they use to
+              design and execute their projects.</p>
+          </div>
+
+          <!-- Resource Card 3: Equipments -->
+          <div
+            class="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
+            <!-- <img src="https://via.placeholder.com/150" alt="Human Capital" class="w-24 h-24 mx-auto mb-4"> -->
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2 text-center">Reputation And Branding</h3>
+            <p class="text-gray-600 text-center">Finally, Inspire Group's reputation and brand are crucial resources
+              for their success. A
+              positive reputation for delivering high-quality...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Motivation Content Section -->
+    <section id="motivation" class="relative py-16 bg-gray-200 flex justify-center items-center min-h-screen">
+      <div class="max-w-screen-md px-6 text-center">
+        <!-- Motivational Quote -->
+        <h2 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-800 leading-snug">
+          "Success is not final, failure is not fatal; it is the courage to continue that counts."
+        </h2>
+      </div>
+
+      <!-- Button at Bottom Left -->
+      <div class="absolute bottom-10 left-10">
+        <button
+          class="bg-blue-500 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-blue-600 hover:shadow-lg transition duration-300">
+          Join The Success
+        </button>
+      </div>
+    </section>
+
+    <!-- Why Enroll In Our Program Section -->
+    <section id="why-enroll" class="py-16 bg-white">
+      <div class="container mx-auto px-6 text-center">
+        <!-- Section Title -->
+        <h2 class="text-4xl font-bold text-gray-800 mb-12">Why Enroll In Our Program</h2>
+
+        <!-- Content Cards -->
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Self-paced Program Card -->
+          <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Self-paced Program</h3>
+            <p class="text-gray-600">
+              Learn at your own pace with our flexible programs that fit your schedule. No deadlines, no stress —
+              complete the course at your speed.
+            </p>
+          </div>
+
+          <!-- Simple Online Enrollment Card -->
+          <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Simple Online Enrollment</h3>
+            <p class="text-gray-600">
+              Enrolling is easy! With our streamlined online process, you can register for any course within minutes
+              from the comfort of your home.
+            </p>
+          </div>
+
+          <!-- Professional Mentors Card -->
+          <div class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Professional Mentors</h3>
+            <p class="text-gray-600">
+              Our experienced mentors guide you through every step of the learning journey, providing personalized
+              support and valuable feedback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Course section-->
+
+    <section class="bg-black py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-white mb-12">Courses Offered</h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Course 1 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Graphic Designing</h3>
+            <p class="text-gray-600 mb-4">Graphic design can benefit participants in
+              many ways, including:</p>
+            <a href="graphic Designing.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Fashion Designing</h3>
+            <p class="text-gray-600 mb-4">Fashion designing can benefit participants in many
+              ways, including.</p>
+            <a href="fashion.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <!-- Course 3 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Computer Training</h3>
+            <p class="text-gray-600 mb-4">Computer training in the design and multimedia
+              category typically focuses on teaching individuals how to use various design and multimedia software
+              to create graphics,.</p>
+            <a href="computer.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <!-- Course 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Civil Engineering</h3>
+            <p class="text-gray-600 mb-4">Civil engineering is a field of study that involves the
+              design, construction, and maintenance of infrastructure such as buildings, bridges, roads, and water
+              systems.</p>
+            <a href="civil.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <!-- Course 5 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Mechanical Engineering</h3>
+            <p class="text-gray-600 mb-4">Mechanical engineering is a field of study that focuses on the design,
+              analysis, and manufacturing of mechanical systems and machines</p>
+            <a href="mechinical.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <!-- Course 6 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Electrical Engineering</h3>
+            <p class="text-gray-600 mb-4">Electrical engineering is a field of study that focuses on the design,
+              analysis, and application of electrical systems and devices. .</p>
+            <a href="electrical.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Architectural Designing</h3>
+            <p class="text-gray-600 mb-4">Participants in architectural designing training will gain knowledge and
+              skills in areas such as design principles, spatial planning, construction technology,</p>
+            <a href="architectural.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Interior Designing</h3>
+            <p class="text-gray-600 mb-4">Participants in interior designing training will gain knowledge and skills
+              in areas such as color theory, space planning, furniture design, lighting design,</p>
+            <a href="interior.html" class="text-indigo-600 font-semibold hover:underline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Why we choose section-->
+
+    <section class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose Us</h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div
+            class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
+            <div class="mb-4 text-indigo-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Flexible Learning</h3>
+            <p class="text-white">Choose from a variety of learning formats, including in-person and online courses,
+              to
+              fit your schedule.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div
+            class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
+            <div class="mb-4 text-indigo-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 21v-4a4 4 0 00-4-4h-2a4 4 0 00-4 4v4" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Career Support</h3>
+            <p class="text-white">Benefit from our dedicated career services team to help you land your dream job
+              after
+              graduation.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="text-center p-6 border rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 bg-black">
+            <div class="mb-4 text-indigo-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8c-4.2 0-8 2-8 4v3h16v-3c0-2-3.8-4-8-4z" />
+                <circle cx="12" cy="5" r="3" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Community & Networking</h3>
+            <p class="text-white">Join a community of like-minded individuals and connect with industry professionals
+              through our events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Testimonials-->
+
+    <section class="bg-gray-100 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Students Say</h2>
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
+                <p class="text-sm text-gray-600">Web Development</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The course was comprehensive and well-structured. The instructors were
+              knowledgeable, and I feel confident in my new skills."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Jane Smith</h3>
+                <p class="text-sm text-gray-600">Data Science</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"An amazing learning experience! The hands-on approach and expert guidance
+              helped me gain deep insights."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <!-- 5-star rating same as above -->
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
+                <p class="text-sm text-gray-600">Cybersecurity</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
+              I
+              feel well-prepared for my career."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <!-- 5-star rating same as above -->
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
+                <p class="text-sm text-gray-600">Cybersecurity</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
+              I
+              feel well-prepared for my career."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <!-- 5-star rating same as above -->
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
+                <p class="text-sm text-gray-600">Cybersecurity</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
+              I
+              feel well-prepared for my career."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <!-- 5-star rating same as above -->
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center mb-4">
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Michael Lee</h3>
+                <p class="text-sm text-gray-600">Cybersecurity</p>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The best decision I made! The course was challenging but highly rewarding.
+              I
+              feel well-prepared for my career."</p>
+            <!-- Star Rating -->
+            <div class="flex">
+              <!-- 5-star rating same as above -->
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.317 4.073a1 1 0 00.95.69h4.29c.97 0 1.371 1.24.588 1.81l-3.478 2.533a1 1 0 00-.364 1.118l1.317 4.073c.3.921-.755 1.688-1.54 1.118L10 13.435l-3.478 2.533c-.785.57-1.84-.197-1.54-1.118l1.317-4.073a1 1 0 00-.364-1.118L3.457 9.5c-.783-.57-.383-1.81.588-1.81h4.29a1 1 0 00.95-.69l1.317-4.073z">
+                </path>
+              </svg>
+            </div>
+          </div>
+
+
+
+
+
+    </section>
+    </Container>
+    <footer class="bg-black text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap -mx-4">
+          <!-- About Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+            <p class="text-gray-400">
+              At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
+              enhance your skills and knowledge in the ever-evolving tech industry.
+            </p>
+          </div>
+          <!-- Quick Links Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul>
+              <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
+              <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
+              <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+              <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
+              <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
+              <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
+
+            </ul>
+          </div>
+          <!-- Services Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Courses</h3>
+            <ul>
+
+
+              <li><a href="graphic Designing.html" class="text-white hover:text-blue-500">Graphic Designing</a></li>
+              <li><a href="fashion.html" class="text-white hover:text-blue-500">Fashion Designing</a></li>
+              <li><a href="computer.html" class="text-white hover:text-blue-500">Computer Training</a></li>
+              <li><a href="civil.html" class="text-white hover:text-blue-500">Civil Engineering</a></li>
+              <li><a href="mechinical.html" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
+              <li><a href="electrical.html" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
+              <li><a href="architectural.html" class="text-white hover:text-blue-500">Architectural Designing</a></li>
+              <li><a href="interior.html" class="text-white hover:text-blue-500">Interior Designing</a></li>
+            </ul>
+          </div>
+          <!-- Contact Section -->
+          <div class="w-full md:w-1/4 px-4">
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+            <p class="text-gray-400">Email: info@inspireacademy.com</p>
+            <p class="text-gray-400">Phone: +1 234 567 890</p>
+            <!-- Social Media Icons -->
+            <div class="mt-6 flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+          <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</section>
 
 
 </body>
