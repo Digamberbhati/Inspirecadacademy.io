@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inspire CAD Academy</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
 </head>
@@ -36,9 +36,9 @@
       <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
         <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
           <a href="index.html"
-            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg">Home</a>
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
           <a href="about.html"
-            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full active:bg-blue-800">About</a>
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
           <a href="freedemo.html"
             class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
             Demo Class</a>
@@ -53,37 +53,37 @@
               @click.away="dropdownOpen=false">
               <ul class="space-y-2 lg:w-56">
                 <li>
-                  <a href="graphic Designing.html"
+                  <a href="graphic Designing.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
                     Designing</a>
                 </li>
                 <li>
-                  <a href="fashion.html"
+                  <a href="fashion.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
                 </li>
                 <li>
-                  <a href="computer.html"
+                  <a href="computer.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
                 </li>
                 <li>
-                  <a href="civil.html"
+                  <a href="civil.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
                 </li>
                 <li>
-                  <a href="mechinical.html"
+                  <a href="mechinical.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
                 </li>
                 <li>
-                  <a href="electrical.html"
+                  <a href="electrical.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
                 </li>
                 <li>
-                  <a href="architectural.html"
+                  <a href="architectural.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
                    </a>
                 </li>
                 <li>
-                  <a href="interior.html"
+                  <a href="interior.html" target="_blank"
                     class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
                 </li>
                 
@@ -125,6 +125,21 @@
     </div>
 
   </nav>
+
+
+
+
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
   <section class="bg-black">
     <p class="text-white text-center text-5xl">About Page</p>
