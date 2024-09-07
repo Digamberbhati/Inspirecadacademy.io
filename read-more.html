@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read More</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+  
+</head>
+
+<body>
+  <nav class="bg-black border-gray-200 px-4 lg:px-6 py-2.5 shadow-md sticky top-0 z-50">
+
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <a href="#" class="flex items-center">
+        <img src="logo.jpg" class="mr-1 h-8 sm:h-20" alt="Logo">
+      </a>
+      <div class="flex items-center lg:order-2">
+
+        <a href="#"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-300">
+          Get Started
+        </a>
+        <button data-collapse-toggle="mobile-menu" type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 010 2H4a1 1 0 01-1-1zm1 4a1 1 0 000 2h12a1 1 0 000-2H4z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
+        <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
+          <a href="index.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white   hover:bg-blue-800 hover:rounded-lg  ">Home</a>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">About</a>
+          <a href="freedemo.html"
+            class="text-base font-medium rounded-md px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Free
+            Demo Class</a>
+
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Courses
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-56">
+                <li>
+                  <a href="graphic Designing.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Graphic
+                    Designing</a>
+                </li>
+                <li>
+                  <a href="fashion.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Fashion Designing</a>
+                </li>
+                <li>
+                  <a href="computer.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Computer Training</a>
+                </li>
+                <li>
+                  <a href="civil.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Civil Engineering</a>
+                </li>
+                <li>
+                  <a href="mechinical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Mechanical Engineering</a>
+                </li>
+                <li>
+                  <a href="electrical.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical Engineering</a>
+                </li>
+                <li>
+                  <a href="architectural.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Architectural Designing
+                   </a>
+                </li>
+                <li>
+                  <a href="interior.html" target="_blank"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Interior Designing</a>
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="relative" x-data="{dropdownOpen:false}">
+            <button
+              class="flex outline-none focus:outline-none px-4 py-2 rounded-md font-medium text-white hover:bg-blue-800"
+              @click="dropdownOpen=!dropdownOpen">
+              Placements
+            </button>
+            <div class="lg:absolute bg-white rounded-md p-2 mt-2" :class="{'hidden':!dropdownOpen,'block':dropdownOpen}"
+              @click.away="dropdownOpen=false">
+              <ul class="space-y-2 lg:w-40">
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Web</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Software</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Electrical</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </li>
+          <a href="about.html"
+            class="text-base font-medium rounded-md  px-4 py-2 text-white  hover:bg-blue-800 hover:rounded-full">Contact</a>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- Hero Section -->
+
+  <!-- Mobile Menu Button -->
+  <div class="-mr-2 flex md:hidden">
+    <button type="button"
+      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+      aria-expanded="false" aria-label="Toggle menu" id="mobile-menu-button">
+      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+  </div>
+  </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-black py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold text-center mb-6 text-white">About Inspire CAD Academy & School of Design</h1>
+      <p class="text-lg text-center mb-8">At Inspire CAD Academy, we aim to bridge the gap between talent and opportunities by offering a wide range of courses that cater to the growing demands of the design and engineering sectors.</p>
+    </div>
+  </section>
+
+  <!-- Our Vision Section -->
+  <section class="py-16 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+          <h2 class="text-3xl font-semibold mb-4 text-white">Our Vision</h2>
+          <p class="text-lg text-white">To empower the next generation of designers and engineers by providing comprehensive training in various fields like Graphic Designing, Fashion Designing, Architectural Engineering, and more. Our vision is to cultivate creativity, technical skills, and innovation in every student.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-4 relative group overflow-hidden">
+            <div class="w-full md:w-1/2 px-4">
+                <img src="read-more.avif" alt="Our Vision" class="rounded-lg shadow-lg transition-transform duration-500 hover:rotate-12 hover:scale-105 sparkle-effect">
+              </div>
+      </div>
+    </div>
+  </section>
+<!-- About Inspire CAD Academy Section -->
+<section class="py-16 bg-black text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-10">About Inspire CAD Academy</h2>
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+          <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+          <p class="text-lg">
+            At Inspire CAD Academy, our mission is to provide world-class training in CAD (Computer-Aided Design) and Design fields, enabling students to harness their creative potential and technical skills. We aim to develop a strong foundation in both theoretical and practical aspects, bridging the gap between academic knowledge and industry requirements.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0 ">
+          <h3 class="text-2xl font-bold mb-4">Our Core Values</h3>
+          <p class="text-lg">
+            We believe in fostering a learning environment that promotes creativity, critical thinking, and hands-on experience. Our core values include integrity, innovation, excellence, and a commitment to lifelong learning, ensuring our students not only succeed but thrive in their professional careers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 bg-blue-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-center mb-10">Why Choose Us?</h2>
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0 text-center">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Experienced Faculty</h3>
+            <p class="text-lg">Our instructors are industry experts with years of experience in their respective fields, dedicated to providing the best learning experience.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 px-4 mb-8 md:mb-0 text-center">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Comprehensive Curriculum</h3>
+            <p class="text-lg">We offer a curriculum that is both comprehensive and up-to-date, ensuring that students are well-prepared for the challenges of the industry.</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3 px-4 text-center">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold mb-4">Placement Assistance</h3>
+            <p class="text-lg">We provide placement support to help our students find the best opportunities and launch their careers in the field of their choice.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Get in Touch</h2>
+      <p class="text-lg mb-8">Have questions? Want to know more about our courses and admissions? Reach out to us!</p>
+      <a href="contact.html" class="inline-block bg-blue-600 hover:bg-blue-400 text-white py-3 px-8 rounded-full">Contact Us</a>
+    </div>
+  </section>
+
+ 
+   <footer class="bg-black text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap -mx-4">
+          <!-- About Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Inspire Academy</h3>
+            <p class="text-gray-400">
+              At Inspire Academy, we provide top-notch IT training to help you achieve your career goals. Join us to
+              enhance your skills and knowledge in the ever-evolving tech industry.
+            </p>
+          </div>
+          <!-- Quick Links Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+            <ul>
+              <li><a href="index.html" class="text-white hover:text-blue-500">Home</a></li>
+              <li><a href="about.html" class="text-white hover:text-blue-500">About</a></li>
+              <li><a href="freedemo.html" class="text-white hover:text-blue-500">Free Demo Class</a></li>
+              <!-- <li><a href="#" class="text-white hover:text-blue-500">Courses</a></li> -->
+              <li><a href="placment.html" class="text-white hover:text-blue-500">Placements</a></li>
+              <li><a href="contact.html" class="text-white hover:text-blue-500">Contact</a></li>
+
+            </ul>
+          </div>
+          <!-- Services Section -->
+          <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
+            <h3 class="text-xl font-semibold mb-4">Courses</h3>
+            <ul>
+
+
+              <li><a href="graphic Designing.html"  target="_blank" class="text-white hover:text-blue-500">Graphic Designing</a></li>
+              <li><a href="fashion.html" target="_blank" class="text-white hover:text-blue-500">Fashion Designing</a></li>
+              <li><a href="computer.html" target="_blank" class="text-white hover:text-blue-500">Computer Training</a></li>
+              <li><a href="civil.html" target="_blank" class="text-white hover:text-blue-500">Civil Engineering</a></li>
+              <li><a href="mechinical.html" target="_blank" class="text-white hover:text-blue-500">Mechanical Engineering</a></li>
+              <li><a href="electrical.html" target="_blank" class="text-white hover:text-blue-500">Electrical Engineering</a></li>
+              <li><a href="architectural.html" target="_blank" class="text-white hover:text-blue-500">Architectural Designing</a></li>
+              <li><a href="interior.html" target="_blank" class="text-white hover:text-blue-500">Interior Designing</a></li>
+            </ul>
+          </div>
+          <!-- Contact Section -->
+          <div class="w-full md:w-1/4 px-4">
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400">123 Main Street, Tech City, 56789</p>
+            <p class="text-gray-400">Email: info@inspireacademy.com</p>
+            <p class="text-gray-400">Phone: +1 234 567 890</p>
+            <!-- Social Media Icons -->
+            <div class="mt-6 flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="mt-10 border-t border-gray-800 pt-6 text-center">
+          <p class="text-gray-500">&copy; 2024 Inspire Academy. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
